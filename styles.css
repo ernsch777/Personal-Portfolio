@@ -13,6 +13,30 @@ font-family: 'Yellowtail', cursive; */
 body {
     margin: 0 auto;
 }
+@font-face {
+    font-family: "Outline";
+    src: url("/Elephant-Outline.otf") format("opentype");
+}
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(65%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes wait {
+    from { transform: translateY(20px); }
+    to { transform: translateY(20px); }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 /* Navbar Section************************ */
 #navbar {
     display: flex;
@@ -23,7 +47,7 @@ body {
     height: 3rem;
     font-size: 1.5em;
     font-weight: 400;
-    padding-right: 20px;
+    padding-right: 30px;
     width: 100%;
     position: fixed;
     top: 0px;
@@ -39,43 +63,231 @@ body {
     border-top: 3px #241E0E solid;
     border-bottom: 3px white solid;
 }
+/* Main Landing Page Section************************ */
 #landingpage {
-    background-image: url(sunrise.jpg);
-    background-size: cover;
+    background: rgb(255,219,136);
+    background: linear-gradient(0deg, rgba(255,219,136,1) 0%, rgba(69,113,176,1) 60%);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 100vh;
+    position: relative;
 }
-.mainitem {
-    width: 35%;
-    margin: 1rem;
+#summary {
+    width: 45%;
 }
-#hero img{
-    width: 80%;
-    border-radius: 50%;
+#summary span{
+    font-family: "Outline";
+    font-weight: 300;
+    font-size: 4.3rem;
+    color: white;
 }
 #summary h1{
-    font-size: 3em;
+    font-size: 4.1rem;
+    color: black;
 }
-#summary h4{
+.title {
+    position: relative;
+}
+.title::after{
+    content: "";
+    display: block;
+    width: 8.5rem;
+    height: .5rem;
+    background-color: black;
+    -webkit-transition: all ease-out 1200ms;
+    -moz-transition: all ease-out 1200ms;
+    transition: all ease-out 1200ms;
+    position: absolute;
+    top: 95%;
+    left: 64%;
+    animation: 2s ease-out 0s 1 wait, 2.5s ease-out 0s 1 slideInFromRight;
+}
+.title:hover::after{
+    left: 90%;
+}
+#summary h3{
+    font-size: 1.5rem;
+}
+.trans_btn{
+    margin-top: 4rem;
+    background-color: transparent;
     text-align: center;
-    font-size: 1em;
-    margin-top: 3rem;
-}
-#summary button{
-    background-color: #241E0E;
+    width: 15rem;
+    height: 3.5rem;
     padding: .2rem 1rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    border: 3px white solid;
+    position: relative;
 }
-#summary a {
+.trans_btn a {
     text-decoration: none;
     color: white;
 }
+.trans_btn:hover{
+    letter-spacing: 2px;
+    transition: all ease-out 900ms;
+}
+.trans_btn a:hover {
+    color: white;
+}
+.trans_btn::before{
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    background-color: white;
+    -webkit-transition: all ease-out 1200ms;
+    -moz-transition: all ease-out 1200ms;
+    transition: all ease-out 1200ms;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+    z-index: 100;
+}
+.trans_btn:hover::before{
+    width: 3rem;
+}
+.trans_btn::after{
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    background-color: white;
+    -webkit-transition: all ease-out 1200ms;
+    -moz-transition: all ease-out 1200ms;
+    transition: all ease-out 1200ms;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+}
+.trans_btn:hover::after{
+    width: 3rem;
+}
+.summaryend{
+    position: relative;
+    z-index: 1;
+}
+#summary h4{
+    font-size: 1.2em;
+    margin-top: 4.5rem;
+    z-index: 10;
+}
+.quote:before {
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+    content: "\f10d";
+}
+.fa-quote-left {
+    position: absolute;
+    display: inline-block;
+    top: -10%;
+    left: -2%;
+    color: rgb(221, 221, 221);
+    /* animation: 1s ease-out 0 1 fadeIn; */
+    animation: fadeIn linear 2s;
+    -webkit-animation: fadeIn linear 2s;
+    -moz-animation: fadeIn linear 2s;
+    -o-animation: fadeIn linear 2s;
+    -ms-animation: fadeIn linear 2s;
+}
+.fa-quote-right {
+    color: rgb(221, 221, 221);
+    animation: fadeIn linear 2s;
+    -webkit-animation: fadeIn linear 2s;
+    -moz-animation: fadeIn linear 2s;
+    -o-animation: fadeIn linear 2s;
+    -ms-animation: fadeIn linear 2s;
+}
+#hero {
+    width: 35%;
+    display: grid;
+    place-content: center;
+}
+#hero img{
+    width: 90%;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.arrow, .arrow:before {
+    position: absolute;
+    left: 50%;
+}
+.arrow {
+    width: 40px;
+    height: 40px;
+    top: 94%;
+    margin: -20px 0 0 -20px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-left: none;
+    border-top: none;
+    border-right: 4px #fff solid;
+    border-bottom: 4px #fff solid;
+}
+.arrow:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    margin: -10px 0 0 -10px;
+    border-left: none;
+    border-top: none;
+    border-right: 3px #fff solid;
+    border-bottom: 3px #fff solid;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+    display: block;
+    position: relative;
+}
+.arrow a{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    display: block;
+    z-index: 10;
+}
+@keyframes arrow {
+0% {
+    opacity: 1;
+}
+100% {
+    opacity: 0;
+    transform: translate(-10px, -10px);
+}
+}
 
-
-
-/* Contact Section************************ */
+/* About Section***************************/
+.about {
+    background-color:  rgba(69,113,176,1);
+    color: white;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem;
+}
+.about__center {
+    width: 80%;
+    max-width: 800px;
+}
+.about__center h3{
+padding: 4rem 0;
+}
+.about__center h1 {
+    font-size: 3em;
+    padding-top: 1rem;
+}
+/* Contact Section*************************/
 .contact-section {
     display: flex;
     flex-direction: column;
@@ -85,7 +297,7 @@ body {
     width: 100%;
     height: 18rem;
     padding: 0 2rem 1rem 2rem;
-    color: #FFE754;
+    color: rgb(255,219,136);
     background: #241E0E;
 }
 .contact-section-header > h2 {
@@ -97,6 +309,51 @@ body {
 .contact-links a {
     text-decoration: none;
     color: white;
-    padding: 2rem 0.8rem;
+    padding: 2rem 2rem;
     font-size: 2rem;
+}
+@media only screen and (max-width: 1300px){
+    #summary h4{
+        font-size: 1.1em;
+    }
+}
+@media only screen and (max-width: 940px){
+    #summary h1{
+        font-size: 2.8em;
+    }
+    #summary h4{
+        font-size: 1em;
+    }
+}
+@media only screen and (max-width: 800px){
+    .summaryend {
+        display: none;
+    }
+    #summary h1{
+        font-size: 2.3em;
+    }
+}
+@media only screen and (max-width: 660px){
+    #summary h1{
+        font-size: 2em;
+    }
+    #summary h3{
+        font-size: 1em;
+    }
+}@media only screen and (max-width: 575px){
+    #landingpage {
+        flex-direction: column;
+    }
+    #summary {
+        width: 78%
+    }
+    #hero {
+        width: 60%;
+    }
+    #summary h1{
+        font-size: 2.2em;
+    }
+    #summary h3{
+        font-size: 1.1em;
+    }
 }
