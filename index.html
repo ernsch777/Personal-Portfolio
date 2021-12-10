@@ -11,56 +11,69 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
 </head>
 <body>
+    <div id="navbar">
+        <a href="#about">About</a>
+        <a href="#mywork">Work</a>
+        <a href="#contact">Contact</a>
+    </div>
     <div class="mainwrapper">
-        <div id="navbar">
-            <a href="#welcome-section">About</a>
-            <a href="#projects">Work</a>
-            <a href="#contact">Contact</a>
-        </div>
         <main id="landingpage">
             <div class="mainitem" id="summary">
-                <h1>Hi I'm Ernie Schulz.</h1>
+                <h1>Hi I'm <span class="title">Ernie Schulz</span></h1>
                 <h3>
-                    Remote-Versatile Web Developer working out of Nashville, Tennessee and the entire 50 states. 
+                    I'm A Remote and Technical Web Developer working out of Nashville, Tennessee and the entire 50 states. 
                 </h3>
-                <br>
-                <button><a href="#mywork"> > View My Work</a> </button>
-                <br>
+                <button class="trans_btn"><a href="#mywork"> > View My Work</a> </button>
                 <div class="summaryend">
-                    <h4>
-                        It’s important to build something from first principles rather than by analogy. The normal way we conduct our lives is we look to what has already been done, or if it is like what other people are doing. With first principles you boil things down to the most fundamental truths…and then reason up from there.”
+                    <i class="fas fa-quote-left fa-2x" id="firstquote"></i>
+                    <h4 class="quote">
+                        It’s important to build something new from first principles rather than by analogy. The normal way we conduct our lives is we look to what has already been done, or if it is like what other people are currently doing. With first principles you boil things down to the most fundamental truths… and then build up from there.
+                        <i class="fas fa-quote-right fa-1x"></i>
                     </h4>
-
+                    
                 </div>
             </div>
             <div class="mainitem" id="hero">
                 <img src="headshot.jpg" alt="background image">
             </div>
+            <div class="arrow">
+                <a href="#mywork"></a>
+            </div>
         </main>
-        <section id="mywork">
-            <div class="fairweather">
-                <!-- https://ernsch777.github.io/FairWeatherTripper-App/ -->
-                <h3>Weather app that allows you to enter multiple destination for a trip and receive an accurate weather forecast for each leg of your journey</h3>
-                <button>View Site</button>
-                <h3>Built with HTML, CSS, and Vanilla Javascript</h3>
-            </div>
-            <div class="projectCard">
-                <a href="https://ernsch777.github.io/Free-Code-Camp-Test---Product-Page/" target="_blank"><img src="undersunpng.png" alt=""></a>
-                <a href="https://ernsch777.github.io/Free-Code-Camp-Test---Product-Page/" target="_blank" class="textLink">&lt; Product Display Site &gt;</a>
-            </div>
-            <a href="https://github.com/ernsch777?tab=repositories" id="profile-link">FULL PORTFOLIO</a>
-        </section>
-        <section id="contact" class="contact-section">
-            <div class="contact-section-header">
-                <h2>Let's work together...</h2>
-            </div>
-            <div class="contact-links">
-                <a href="https://facebook.com/freecodecamp" target="_blank" class="btn contact-details"> <i class="fab fa-facebook-square"></i> Facebook</a>
-                <a href="https://github.com/freecodecamp" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://twitter.com/freecodecamp" target="_blank" class="btn contact-details"><i class="fab fa-twitter"></i> Twitter</a>
-                <a href="mailto:example@example.com" class="btn contact-details"><i class="fas fa-at"></i> Send a mail</a>
-                <a href="tel:555-555-5555" class="btn contact-details"><i class='fas fa-mobile-alt'></i> Call me</a>
-            </div>
-        </section>
     </div>
+    <section id="mywork">
+        <div class="fairweather">
+            <!-- https://ernsch777.github.io/FairWeatherTripper-App/ -->
+            <h3>Weather app that allows you to enter multiple destination for a trip and receive an accurate weather forecast for each leg of your journey</h3>
+            <button>View Site</button>
+            <h3>Built with HTML, CSS, and Vanilla Javascript</h3>
+        </div>
+        <div class="projectCard">
+            <a href="https://ernsch777.github.io/Free-Code-Camp-Test---Product-Page/" target="_blank"><img src="undersunpng.png" alt=""></a>
+            <a href="https://ernsch777.github.io/Free-Code-Camp-Test---Product-Page/" target="_blank" class="textLink">&lt; Product Display Site &gt;</a>
+        </div>
+        <a href="https://github.com/ernsch777?tab=repositories" id="profile-link">FULL PORTFOLIO</a>
+    </section>
+    <section class="about">
+        <div class="about__center">
+        <h1>A Little About Me</h1>
+            <h3 class="description">
+                Technical frontend developer with 3 years of software development experience gathered during a successful engineering and corporate supply chain career. During which I’ve leaned heavily on utilizing code and instituting new web technologies to meet company objectives. <br><br> Currently, in 2021 I have taken a sabbatical for a full year in order to deep dive into training in HTML, CSS, JavaScript, etc. to shift my career focus into full time frontend development. 
+            </h3>
+            <h3 class="skills">
+                Experienced with:
+                HTML, CSS, JavaScript, Bootstrap, SASS, RESTful APIs, JSON, BEM, Git, and object-oriented programming.
+            </h3>
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <div class="contact-section-header">
+            <h2>Let's work together...</h2>
+        </div>
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/ernieschulz/" target="_blank" class="btn contact-details"> <i class="fab fa-linkedin-in"></i> LinkedIn</a>
+            <a href="https://github.com/ernsch777" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
+            <a href="mailto:ernestschulz@hotmail.com" class="btn contact-details"><i class="fas fa-at"></i> Send an email</a>
+        </div>
+    </section>
 </body>
