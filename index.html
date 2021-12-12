@@ -19,15 +19,17 @@
     <div class="mainwrapper">
         <main id="landingpage">
             <div class="mainitem" id="summary">
-                <h1>Hi I'm <span class="title">Ernie Schulz</span></h1>
+                <h1>Hi I'm <span id="name" class="title">Ernie Schulz</span></h1>
                 <h3>
                     I'm A Remote and Technical Web Developer working out of Nashville, Tennessee and the entire 50 states. 
                 </h3>
-                <button class="trans_btn"><a href="#mywork"> > View My Work</a> </button>
+                <button class="trans_btn">
+                    <div class="fade"><a class="btn__link" href="#mywork"> > View My Work</a></div> 
+                </button>
                 <div class="summaryend">
                     <i class="fas fa-quote-left fa-2x" id="firstquote"></i>
                     <h4 class="quote">
-                        It’s important to build something new from first principles rather than by analogy. The normal way we conduct our lives is we look to what has already been done, or if it is like what other people are currently doing. With first principles you boil things down to the most fundamental truths… and then build up from there.
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It’s important to build something new from first principles rather than by analogy. The normal way we conduct our lives is we look to what has already been done, or if it is like what other people are currently doing. With first principles you boil things down to the most fundamental truths… and then build up from <span>there.</span> 
                         <i class="fas fa-quote-right fa-1x"></i>
                     </h4>
                     
@@ -42,18 +44,30 @@
         </main>
     </div>
     <section id="mywork">
-        <div class="fairweather">
-            <!-- https://ernsch777.github.io/FairWeatherTripper-App/ -->
-            <h3>Weather app that allows you to enter multiple destination for a trip and receive an accurate weather forecast for each leg of your journey</h3>
-            <button>View Site</button>
-            <h3>Built with HTML, CSS, and Vanilla Javascript</h3>
+        <h1>Projects</h1>
+        <div class="projects">
+            <a href="https://ernsch777.github.io/FairWeatherTripper-App/">
+                <div class="projectCard" id="fairweather">
+                    <h3>Weather app that allows you to enter multiple destination for a trip and receive an accurate weather forecast for each leg of your journey</h3>
+                    <button> View Site</button>
+                    <h3>~~Built with HTML, CSS, and Vanilla Javascript Only~~</h3>
+                </div>
+            </a>    
+            <div class="projectCard" id="undersun">
+                <a href="https://ernsch777.github.io/Free-Code-Camp-Test---Product-Page/" target="_blank"></a>
+                <a href="https://ernsch777.github.io/Free-Code-Camp-Test---Product-Page/" target="_blank" class="textLink">&lt; Product Display Site &gt;</a>
+            </div>
+            <div class="projectCard" id="github">
+                <a href="https://github.com/ernsch777?tab=repositories" id="profile-link">FULL PORTFOLIO</a>
+            </div>
         </div>
-        <div class="projectCard">
-            <a href="https://ernsch777.github.io/Free-Code-Camp-Test---Product-Page/" target="_blank"><img src="undersunpng.png" alt=""></a>
-            <a href="https://ernsch777.github.io/Free-Code-Camp-Test---Product-Page/" target="_blank" class="textLink">&lt; Product Display Site &gt;</a>
-        </div>
-        <a href="https://github.com/ernsch777?tab=repositories" id="profile-link">FULL PORTFOLIO</a>
     </section>
+
+
+
+
+
+
     <section class="about">
         <div class="about__center">
         <h1>A Little About Me</h1>

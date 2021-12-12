@@ -37,7 +37,36 @@ body {
         opacity: 1;
     }
 }
-/* Navbar Section************************ */
+@keyframes arrow {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-10px, -10px);
+    }
+}
+@keyframes disappearL{
+    0% {
+        width: 5rem;
+        left: -50%;
+    }
+    100% {
+        width: 0;
+        left: -8%
+    }
+}
+@keyframes disappearR{
+    0% {
+        width: 5rem;
+        left: 125%;
+    }
+    100% {
+        width: 0;
+        left: 125%
+    }
+}
+/* Navbar Section*******************************************/
 #navbar {
     display: flex;
     justify-content:flex-end;
@@ -63,7 +92,7 @@ body {
     border-top: 3px #241E0E solid;
     border-bottom: 3px white solid;
 }
-/* Main Landing Page Section************************ */
+/* Main Landing Page Section********************************/
 #landingpage {
     background: rgb(255,219,136);
     background: linear-gradient(0deg, rgba(255,219,136,1) 0%, rgba(69,113,176,1) 60%);
@@ -76,7 +105,7 @@ body {
 #summary {
     width: 45%;
 }
-#summary span{
+#name{
     font-family: "Outline";
     font-weight: 300;
     font-size: 4.3rem;
@@ -101,7 +130,7 @@ body {
     position: absolute;
     top: 95%;
     left: 64%;
-    animation: 2s ease-out 0s 1 wait, 2.5s ease-out 0s 1 slideInFromRight;
+    animation: 2.5s ease-out 0s 1 slideInFromRight;
 }
 .title:hover::after{
     left: 90%;
@@ -169,6 +198,36 @@ body {
 .trans_btn:hover::after{
     width: 3rem;
 }
+.fade {
+    position: relative;
+}
+.btn__link {
+    position: relative;
+}
+.fade::before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: -40%;
+    animation: disappearL linear 0.8s;
+}
+.btn__link::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 108%;
+    animation: disappearR linear 0.8s;
+}
 .summaryend{
     position: relative;
     z-index: 1;
@@ -176,12 +235,7 @@ body {
 #summary h4{
     font-size: 1.2em;
     margin-top: 4.5rem;
-    z-index: 10;
-}
-.quote:before {
-    font-family: "Font Awesome 5 Brands";
-    font-weight: 400;
-    content: "\f10d";
+    line-height: 1.8;
 }
 .fa-quote-left {
     position: absolute;
@@ -189,7 +243,6 @@ body {
     top: -10%;
     left: -2%;
     color: rgb(221, 221, 221);
-    /* animation: 1s ease-out 0 1 fadeIn; */
     animation: fadeIn linear 2s;
     -webkit-animation: fadeIn linear 2s;
     -moz-animation: fadeIn linear 2s;
@@ -256,17 +309,66 @@ body {
     display: block;
     z-index: 10;
 }
-@keyframes arrow {
-0% {
-    opacity: 1;
+/*Work Projects Section************************************/
+#mywork {
+    background-color: black;
+    color: white;
+    padding: 5rem 5rem 10rem 5rem;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
 }
-100% {
-    opacity: 0;
-    transform: translate(-10px, -10px);
+#mywork h1 {
+    font-size: 6em;
+    text-align: center;
 }
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 5rem;
+    margin-top: 5rem;
+}
+.projects a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.9em;
+}
+.projectCard{
+    width: 26rem;
+    height: 26rem;
+    background-color: rgb(255,219,136);
+    border: 2px whitesmoke solid;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    position: relative;
+}
+.projectCard h3 {
+
+}
+#fairweather {
+    background-image: url(fairweather.png);
+    background-size: cover;
+    background-position: center;
+}
+#undersun {
+    background-image: url(undersunpng.png);
+    background-size: cover;
+    background-position: center;
+}
+#github {
+    background-image: url(undersunpng.png);
+    background-size: cover;
+    background-position: center;
 }
 
-/* About Section***************************/
+
+
+
+
+
+/*About Section********************************************/
 .about {
     background-color:  rgba(69,113,176,1);
     color: white;
@@ -287,7 +389,7 @@ padding: 4rem 0;
     font-size: 3em;
     padding-top: 1rem;
 }
-/* Contact Section*************************/
+/*Contact Section******************************************/
 .contact-section {
     display: flex;
     flex-direction: column;
