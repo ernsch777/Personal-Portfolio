@@ -16,6 +16,7 @@
         <a href="#mywork">Work</a>
         <a href="#contact">Contact</a>
     </div>
+    <!-- This is the main intro and img section of the page -->
     <div class="mainwrapper">
         <main id="landingpage">
             <div class="mainitem" id="summary">
@@ -43,23 +44,43 @@
             </div>
         </main>
     </div>
+    <!-- This is the projects - my work section of the page -->
     <section id="mywork">
-        <h1>Projects</h1>
+        <h1> <span class="projects__title">Projects</span> </h1>
         <div class="projects">
-            <a href="https://ernsch777.github.io/FairWeatherTripper-App/">
-                <div class="projectCard" id="fairweather">
-                    <h3>Weather app that allows you to enter multiple destination for a trip and receive an accurate weather forecast for each leg of your journey</h3>
-                    <button> View Site</button>
-                    <h3>~~Built with HTML, CSS, and Vanilla Javascript Only~~</h3>
+            <a href="https://ernsch777.github.io/FairWeatherTripper-App/" target="_blank">
+                <div class="project__card" id="fairweather">
+                    <div class="inner__card">
+                        <div class="inner__contents" id="inner__fairweather">
+                            <h3> Enter up to 14 destinations into this SPA and receive a composite weather forecast for every leg of the trip</h3>
+                            <h3 id="builtwith__fairweather">~~ Built with HTML, CSS, &amp; Vanilla Javascript Only ~~</h3>
+                        </div>
+                    </div>
                 </div>
             </a>    
-            <div class="projectCard" id="undersun">
-                <a href="https://ernsch777.github.io/Free-Code-Camp-Test---Product-Page/" target="_blank"></a>
-                <a href="https://ernsch777.github.io/Free-Code-Camp-Test---Product-Page/" target="_blank" class="textLink">&lt; Product Display Site &gt;</a>
-            </div>
-            <div class="projectCard" id="github">
-                <a href="https://github.com/ernsch777?tab=repositories" id="profile-link">FULL PORTFOLIO</a>
-            </div>
+            <a href="https://ernsch777.github.io/Free-Code-Camp-Test---Product-Page/" target="_blank">
+                <div class="project__card" id="undersun">
+                    <div class="inner__card">
+                        <div class="inner__contents" id="inner__undersun">
+                            <h3>Product and services display site for an exercise company</h3>
+                            <h3 id="builtwith__undersun">~~  Built with HTML &amp; CSS  with no preprocessors ~~</h3>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/ernsch777" target="_blank">
+                <div class="project__card" id="github">
+                    <div class="inner__card">
+                        <div class="inner__contents" id="inner__github">
+                            <h3>&nbsp;SEE FULL PORTFOLIO</h3>
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="arrow__second">
+            <a href="#about"></a>
         </div>
     </section>
 
@@ -67,10 +88,10 @@
 
 
 
-
-    <section class="about">
+    <!-- This is the about section of the page --------------->
+    <section id="about">
         <div class="about__center">
-        <h1>A Little About Me</h1>
+        <h1>A <span class="about__title">Little About</span> Me </h1>
             <h3 class="description">
                 Technical frontend developer with 3 years of software development experience gathered during a successful engineering and corporate supply chain career. During which I’ve leaned heavily on utilizing code and instituting new web technologies to meet company objectives. <br><br> Currently, in 2021 I have taken a sabbatical for a full year in order to deep dive into training in HTML, CSS, JavaScript, etc. to shift my career focus into full time frontend development. 
             </h3>
@@ -78,8 +99,13 @@
                 Experienced with:
                 HTML, CSS, JavaScript, Bootstrap, SASS, RESTful APIs, JSON, BEM, Git, and object-oriented programming.
             </h3>
+            <h3 class="verse">
+                A belief I hold that drives my work ethic:"
+                Do you see a person skilled in his work? He will stand before kings; He will not stand before obscure people. "
+            </h3>
         </div>
     </section>
+    <!-- This is the contact me section of the page ---------->
     <section id="contact" class="contact-section">
         <div class="contact-section-header">
             <h2>Let's work together...</h2>
