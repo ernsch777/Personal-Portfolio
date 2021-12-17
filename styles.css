@@ -469,8 +469,13 @@ body {
 #about {
     background-color:  rgba(69,113,176,1);
     color: white;
-    height: 55rem;
+    /* height: 55rem; */
     font-size: 1em;
+}
+.about__main {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
 }
 .full__about {
     margin: 0 auto;
@@ -507,6 +512,29 @@ body {
 }
 .about__title:hover::after{
     left: 115%;
+}
+.about__section {
+    display: flex;
+    justify-content: space-between;
+}
+.career__image {
+    width: 35%;
+    background-image: url(dresden\ wafer.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.career__text {
+    width: 55%;
+}
+.personal__text {
+    width: 55%;
+    height: 20rem;
+}
+.personal__image {
+    width: 35%;
+    background-image: url(RV-trip.jpg);
+    background-size: cover;
+    background-position: center;
 }
 .full__about h3 {
     padding: 1rem 0;
