@@ -56,6 +56,16 @@ body {
         left: -8%
     }
 }
+@keyframes disappearLsmall{
+    0% {
+        width: 5rem;
+        left: -58%;
+    }
+    100% {
+        width: 0;
+        left: -10%
+    }
+}
 @keyframes disappearR{
     0% {
         width: 5rem;
@@ -109,12 +119,12 @@ body {
 #name{
     font-family: "Outline";
     font-weight: 300;
-    font-size: 5rem;
+    font-size: 6rem;
     color: white;
     z-index: 1;
 }
 #summary h1{
-    font-size: 3rem;
+    font-size: 4rem;
     color: black;
 }
 .title {
@@ -139,9 +149,10 @@ body {
 }
 #summary h3{
     font-size: 1.5rem;
+    margin-bottom: 2rem;
 }
 .trans_btn{
-    margin-top: 4rem;
+    margin-top: 2rem;
     background-color: transparent;
     text-align: center;
     width: 15rem;
@@ -454,40 +465,31 @@ body {
     font-size: 1.4rem;
     margin-top: 6rem;
 }
-
-
-
 /*About Section********************************************/
 #about {
     background-color:  rgba(69,113,176,1);
     color: white;
-    height: 49rem;
+    height: 55rem;
+    font-size: 1em;
+}
+.full__about {
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 3rem;
-}
-.about__center {
+    flex-direction: column;
     width: 80%;
-    max-width: 800px;
+    max-width: 1400px;
 }
-.about__center h3{
-padding: 4rem 0;
-}
-.about__center h1 {
-    font-size: 5em;
-    padding-top: 1rem;
-    font-family: "Outline";
-    font-weight: 300;
+.about__center h1{
+    padding: 4rem 0 2rem 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 5rem;
 }
 #about span{
     z-index: 1;
     position: relative;
     font-family: "Outline";
     font-weight: 300;
-}
-.about__title {
-    position: relative;
 }
 .about__title::after{
     content: "";
@@ -500,11 +502,17 @@ padding: 4rem 0;
     transition: all ease-out 1200ms;
     position: absolute;
     top: 95%;
-    left: 83%;
+    left: 92%;
     animation: 2.5s ease-out 0s 1 slideInFromRight;
 }
 .about__title:hover::after{
-    left: 105%;
+    left: 115%;
+}
+.full__about h3 {
+    padding: 1rem 0;
+}
+.aboutheader {
+    font-size: 2rem;
 }
 /*Contact Section******************************************/
 .contact-section {
@@ -532,51 +540,229 @@ padding: 4rem 0;
     font-size: 2rem;
 }
 /*Media Query Section**************************************/
-@media only screen and (max-width: 1300px){
+@media only screen and (max-width: 1400px){
+    #summary h1{
+        font-size: 3.3em;
+    }
+    #name{
+        font-size: 5rem;
+    }
+    #summary h3{
+        font-size: 1.4em;
+    }
     #summary h4{
         font-size: 1.1em;
     }
 }
-@media only screen and (max-width: 1150px){
+@media only screen and (max-width: 1160px){
     #summary h1{
-        font-size: 3.1em;
+        font-size: 3em;
     }
     #name{
-        font-size: 3.3rem;
+        font-size: 4.3rem;
     }
     #summary h3{
-        font-size: 1.3em;
+        font-size: 1.2em;
+        margin-bottom: 1rem;
     }
-}
-@media only screen and (max-width: 800px){
-    .summaryend {
-        display: none;
-    }
-    #summary h1{
-        font-size: 2.3em;
-    }
-}
-@media only screen and (max-width: 660px){
-    #summary h1{
-        font-size: 2em;
-    }
-    #summary h3{
+    #summary h4{
         font-size: 1em;
     }
-}@media only screen and (max-width: 575px){
+    .title::after, .projects__title::after, .about__title::after{
+        width: 9.5rem;
+    }
+    .trans_btn{
+        width: 13rem;
+        height: 3rem;
+        padding: .2rem 1rem;
+        font-size: 1.2rem;
+    }
+    .fade::before{
+        animation: disappearLsmall linear 0.8s;
+    }
+    .about__title::after{
+        left: 100%;
+    }
+}
+@media only screen and (max-width: 1020px){
+    #summary h1{
+        font-size: 2.7em;
+    }
+    #name{
+        font-size: 3.7rem;
+    }
+    #summary h3{
+        font-size: 1.2em;
+        padding-top: 0.8rem;
+    }
+    #summary h4{
+        font-size: 1em;
+    }
+    .title::after, .projects__title::after, .about__title::after{
+        width: 7.5rem;
+    }
+    .fa-quote-left {
+        font-size: 1.5em;
+    }
+    #mywork {
+        background-color: black;
+        color: white;
+        padding: 3rem 5rem 6rem 5rem;
+    }
+    #mywork h1, .about__center h1 {
+        font-size: 4rem;
+    }
+}
+@media only screen and (max-width: 880px){
+    #navbar {
+        gap: 20px;
+        height: 3rem;
+        font-size: 1.2em;
+        font-weight: 400;
+        padding-right: 20px;
+        z-index: 10;
+    }
     #landingpage {
         flex-direction: column;
     }
     #summary {
-        width: 78%
+        width: 65%;
+        padding-top: 4rem;
     }
     #hero {
-        width: 60%;
+        width: 40%
+    }
+    .summaryend {
+        display: none;
+    }
+    .button__center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #about{
+        font-size: 0.8rem;
+    }
+    .aboutheader {
+        font-size: 1.5rem;
+    }
+    .contact-section-header > h2 {
+        font-size: 2.5rem;
+    }
+    .contact-links a {
+        padding: 2rem 1rem;
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width: 620px){
+    #navbar {
+        gap: 10px;
+        height: 3.5rem;
+        font-size: 1.1em;
+        font-weight: 400;
+        padding-right: 10px;
+    }
+    #hero {
+        width: 50%;
     }
     #summary h1{
         font-size: 2.2em;
     }
+    #name{
+        font-size: 3rem;
+    }
+    .title::after, .projects__title::after, .about__title::after{
+        width: 6rem;
+        height: 0.4rem;
+    }
     #summary h3{
         font-size: 1.1em;
+    }
+    #mywork h1, .about__center h1 {
+        font-size: 3rem;
+    }
+    .contact-section {
+        height: 22rem;
+        padding-top: 2rem;
+    }
+    .contact-links{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0rem;
+    }
+    .contact-section-header > h2 {
+        font-size: 2rem;
+    }
+    .contact-links a {
+        padding: 1rem 1rem 1rem 0rem;
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (max-width: 510px){
+    #navbar {
+        display: flex;
+        justify-content:space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        padding-right: 0;
+    }
+    #summary {
+        width: 75%;
+        padding-top: 3rem;
+    }
+    #hero {
+        width: 65%;
+    }
+    #summary h1{
+        font-size: 1.8em;
+    }
+    #name{
+        font-size: 2.5rem;
+    }
+    .title::after, .projects__title::after, .about__title::after{
+        width: 4.7rem;
+    }
+    #summary h3{
+        font-size: 1em;
+        margin-bottom: 2rem;
+        padding-top: 1rem;
+    }
+    #mywork h1{
+        font-size: 2.5rem;
+    }
+    .about__center h1 {
+        font-size: 2.3rem;
+    }
+    .project__card{
+        width: 20rem;
+        height: 20rem;
+        padding-top: 1rem;
+    }
+    #inner__fairweather {
+        font-size: 1.2em;
+        padding: 6rem 1rem 1rem 1rem;
+    }
+    #inner__undersun {
+        font-size: 1.2em;
+        padding: 6rem 1rem 1rem 1rem;
+    }
+    #inner__github {
+        font-size: 1.6em;
+        padding-top: 8.4rem;
+    }
+    #builtwith__fairweather{
+        font-size: 1rem;
+        margin-top: 1.5rem;
+    }
+    #builtwith__undersun{
+        font-size: 1rem;
+        margin-top: 3rem;
+    }
+    .contact-section {
+        height: 24rem;
     }
 }
