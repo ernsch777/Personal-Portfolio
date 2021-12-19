@@ -15,7 +15,7 @@ body {
 }
 @font-face {
     font-family: "Outline";
-    src: url("/Elephant-Outline.otf") format("opentype");
+    src: url("../Personal-Portfolio/Elephant-Outline.woff") format("woff");
 }
 @keyframes slideInFromRight {
     0% {
