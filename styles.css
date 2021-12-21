@@ -16,6 +16,7 @@ body {
 @font-face {
     font-family: "Outline";
     src: url("../Personal-Portfolio/Elephant-Outline.woff") format("woff");
+    src: url("/Elephant-Outline.woff") format("woff");
 }
 @keyframes slideInFromRight {
     0% {
@@ -469,13 +470,12 @@ body {
 #about {
     background-color:  rgba(69,113,176,1);
     color: white;
-    /* height: 55rem; */
     font-size: 1em;
 }
 .about__main {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 7rem;
 }
 .full__about {
     margin: 0 auto;
@@ -483,9 +483,10 @@ body {
     flex-direction: column;
     width: 80%;
     max-width: 1400px;
+    padding-bottom: 5rem;
 }
 .about__center h1{
-    padding: 4rem 0 2rem 0;
+    padding: 4rem 0 3rem 0;
     text-align: center;
     font-weight: 700;
     font-size: 5rem;
@@ -518,23 +519,31 @@ body {
     justify-content: space-between;
 }
 .career__image {
-    width: 35%;
-    background-image: url(dresden\ wafer.jpg);
-    background-size: cover;
-    background-position: center;
+    width: 40%;
+    display: grid;
+    place-content: center;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+#techs {
+    height: 50vh;
+    object-fit: contain;
 }
 .career__text {
-    width: 55%;
+    width: 50%;
 }
 .personal__text {
-    width: 55%;
+    width: 50%;
     height: 20rem;
 }
 .personal__image {
-    width: 35%;
-    background-image: url(RV-trip.jpg);
-    background-size: cover;
-    background-position: center;
+    width: 40%;
+    display: grid;
+    place-content: center;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+#RVtrip {
+    height: 50vh;
+    object-fit: contain;
 }
 .full__about h3 {
     padding: 1rem 0;
@@ -611,6 +620,12 @@ body {
     .about__title::after{
         left: 100%;
     }
+    #techs {
+        height: 45vh;
+    }
+    #about{
+        font-size: 0.9rem;
+    }
 }
 @media only screen and (max-width: 1020px){
     #summary h1{
@@ -639,6 +654,16 @@ body {
     }
     #mywork h1, .about__center h1 {
         font-size: 4rem;
+    }
+    .about__section {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 4rem;
+    }
+    .about__section2 {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
     }
 }
 @media only screen and (max-width: 880px){
@@ -680,6 +705,9 @@ body {
     .contact-links a {
         padding: 2rem 1rem;
         font-size: 1.5rem;
+    }
+    #techs {
+        height: 35vh;
     }
 }
 @media only screen and (max-width: 620px){
@@ -793,4 +821,7 @@ body {
     .contact-section {
         height: 24rem;
     }
+}
+@media only screen and (max-width: 510px) and (orientation: landscape){
+
 }
