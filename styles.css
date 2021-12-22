@@ -475,7 +475,7 @@ body {
 .about__main {
     display: flex;
     flex-direction: column;
-    gap: 7rem;
+    gap: 5rem;
 }
 .full__about {
     margin: 0 auto;
@@ -514,7 +514,7 @@ body {
 .about__title:hover::after{
     left: 115%;
 }
-.about__section {
+.about__section, .about__section2 {
     display: flex;
     justify-content: space-between;
 }
@@ -522,28 +522,26 @@ body {
     width: 40%;
     display: grid;
     place-content: center;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 #techs {
-    height: 50vh;
-    object-fit: contain;
+    width: 100%;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 .career__text {
     width: 50%;
 }
 .personal__text {
     width: 50%;
-    height: 20rem;
 }
 .personal__image {
     width: 40%;
     display: grid;
     place-content: center;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 #RVtrip {
     height: 50vh;
     object-fit: contain;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 .full__about h3 {
     padding: 1rem 0;
@@ -590,6 +588,12 @@ body {
     #summary h4{
         font-size: 1.1em;
     }
+    #about{
+        font-size: 0.9rem;
+    }
+    .personal__image {
+        width: 45%;
+    }
 }
 @media only screen and (max-width: 1160px){
     #summary h1{
@@ -620,12 +624,6 @@ body {
     .about__title::after{
         left: 100%;
     }
-    #techs {
-        height: 45vh;
-    }
-    #about{
-        font-size: 0.9rem;
-    }
 }
 @media only screen and (max-width: 1020px){
     #summary h1{
@@ -655,15 +653,38 @@ body {
     #mywork h1, .about__center h1 {
         font-size: 4rem;
     }
+    .about__main {
+        gap: 4rem;
+    }
+    .about__center h1{
+        padding: 3rem 0 2rem 0;
+    }
     .about__section {
         display: flex;
         flex-direction: column-reverse;
-        gap: 4rem;
+        gap: 2rem;
+        align-items: center;
     }
     .about__section2 {
         display: flex;
         flex-direction: column;
-        gap: 4rem;
+        gap: 2rem;
+        align-items: center;
+    }
+    .career__image {
+        width: 80%;
+    }
+    .career__text {
+        width: 80%;
+    }
+    .personal__text {
+        width: 80%;
+    }
+    .personal__image {
+        width: 80%;
+    }
+    #RVtrip {
+        width: 100%;
     }
 }
 @media only screen and (max-width: 880px){
@@ -693,6 +714,9 @@ body {
         align-items: center;
         justify-content: center;
     }
+    .full__about {
+        width: 90%;
+    }
     #about{
         font-size: 0.8rem;
     }
@@ -705,9 +729,6 @@ body {
     .contact-links a {
         padding: 2rem 1rem;
         font-size: 1.5rem;
-    }
-    #techs {
-        height: 35vh;
     }
 }
 @media only screen and (max-width: 620px){
@@ -736,6 +757,9 @@ body {
     }
     #mywork h1, .about__center h1 {
         font-size: 3rem;
+    }
+    .full__about {
+        width: 95%;
     }
     .contact-section {
         height: 22rem;
@@ -793,6 +817,10 @@ body {
     .about__center h1 {
         font-size: 2.3rem;
     }
+    #RVtrip {
+        height: 38vh;
+        object-fit: contain;
+    }
     .project__card{
         width: 20rem;
         height: 20rem;
@@ -817,6 +845,9 @@ body {
     #builtwith__undersun{
         font-size: 1rem;
         margin-top: 3rem;
+    }
+    .about__section2 {
+        gap: 1rem;
     }
     .contact-section {
         height: 24rem;
