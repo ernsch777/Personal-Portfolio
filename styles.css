@@ -409,7 +409,7 @@ body {
     visibility: visible;
 }
 #fairweather {
-    background-image: url(fairweather.png);
+    background-image: url(fairweather.jpg);
     background-size: cover;
     background-position: center;
     color: white;
