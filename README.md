@@ -9,7 +9,8 @@
 
 
 
-Future improvements and features list: 
-1) add flashing down arrows to each section 
-2) add title bar motion for each section 
-3) add more of my work to the projects section
+Future improvements, new features, and known bugs list:
+1) Add flashing down arrows to each section. 
+2) Add title bar motion when each section becomes visible.
+3) Add more of my work to the projects section.
+4) Project work card not centered between 360 and 375 px width screens. So looks great on Iphone but a little off on some Samsungs.
