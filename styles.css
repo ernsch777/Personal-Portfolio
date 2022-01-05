@@ -718,7 +718,7 @@ body {
         width: 90%;
     }
     #about{
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     .aboutheader {
         font-size: 1.5rem;
@@ -760,6 +760,9 @@ body {
     }
     .full__about {
         width: 95%;
+    }
+    #about{
+        font-size: 0.8rem;
     }
     .contact-section {
         height: 22rem;
