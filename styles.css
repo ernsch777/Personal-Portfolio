@@ -532,6 +532,7 @@ body {
 }
 .personal__text {
     width: 50%;
+    padding-top: 1rem;
 }
 .personal__image {
     width: 40%;
@@ -558,7 +559,7 @@ body {
     text-align: center;
     width: 100%;
     height: 18rem;
-    padding: 0 2rem 1rem 2rem;
+    padding: 0 1rem 1rem 1rem;
     color: rgb(255,219,136);
     background: rgb(29, 29, 29);
 }
@@ -681,13 +682,13 @@ body {
         width: 80%;
     }
     .personal__image {
-        width: 80%;
+        width: 88%;
     }
     #RVtrip {
         width: 100%;
     }
 }
-@media only screen and (max-width: 880px){
+@media only screen and (max-width: 880px) and (orientation: portrait){
     #navbar {
         gap: 20px;
         height: 3rem;
@@ -731,7 +732,108 @@ body {
         font-size: 1.5rem;
     }
 }
-@media only screen and (max-width: 620px){
+@media only screen and (max-width: 880px) and (orientation: landscape){
+    #navbar {
+        height: 2.5rem;
+        font-size: 1.1em;
+    }
+    #summary {
+        width: 40%;
+        padding-top: 1.5rem;
+    }
+    #hero {
+        width: 30%
+    }
+    #summary h1{
+        font-size: 1.8em;
+    }
+    #name{
+        font-size: 2.4rem;
+    }
+    #summary h3{
+        font-size: 1em;
+        margin: 0;
+    }
+    .summaryend {
+        display: none;
+    }
+    .button__center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .full__about {
+        width: 90%;
+    }
+    #about{
+        font-size: 0.8rem;
+    }
+    .aboutheader {
+        font-size: 1.5rem;
+    }
+    .contact-section-header > h2 {
+        font-size: 2.5rem;
+    }
+    .contact-links a {
+        padding: 2rem 1rem;
+        font-size: 1.5rem;
+    }
+    .title::after, .projects__title::after, .about__title::after{
+        width: 4.7rem;
+        height: 0.4rem;
+    }
+    .arrow {
+        width: 25px;
+        height: 25px;
+        top: 96%;
+        margin: -20px 0 0 -20px;
+        border-right: 3px #fff solid;
+        border-bottom: 3px #fff solid;
+    }
+    .arrow:before {
+        width: 12px;
+        height: 12px;
+        margin: -5px 0 0 -5px;
+        border-right: 2px #fff solid;
+        border-bottom: 2px #fff solid;
+    }
+    .about__center h1 {
+        font-size: 2.3rem;
+    }
+    #RVtrip {
+        height: 85vh;
+        object-fit: contain;
+    }
+    .project__card{
+        width: 20rem;
+        height: 20rem;
+        padding-top: 1rem;
+    }
+    #inner__fairweather {
+        font-size: 1.2em;
+        padding: 6rem 1rem 1rem 1rem;
+    }
+    #inner__undersun {
+        font-size: 1.2em;
+        padding: 6rem 1rem 1rem 1rem;
+    }
+    #inner__github {
+        font-size: 1.6em;
+        padding-top: 8.4rem;
+    }
+    #builtwith__fairweather{
+        font-size: 1rem;
+        margin-top: 1.5rem;
+    }
+    #builtwith__undersun{
+        font-size: 1rem;
+        margin-top: 3rem;
+    }
+    .contact-section {
+        height: 13rem;
+    }
+}
+@media only screen and (max-width: 620px) and (orientation: portrait){
     #navbar {
         gap: 10px;
         height: 3.5rem;
@@ -781,7 +883,7 @@ body {
         font-size: 1.3rem;
     }
 }
-@media only screen and (max-width: 510px){
+@media only screen and (max-width: 510px) and (orientation: portrait){
     #navbar {
         display: flex;
         justify-content:space-evenly;
@@ -811,7 +913,6 @@ body {
     }
     #summary h3{
         font-size: 1em;
-        margin-bottom: 2rem;
         padding-top: 1rem;
     }
     #mywork h1{
@@ -855,7 +956,4 @@ body {
     .contact-section {
         height: 24rem;
     }
-}
-@media only screen and (max-width: 510px) and (orientation: landscape){
-
 }
