@@ -485,6 +485,9 @@ body {
     max-width: 1400px;
     padding-bottom: 5rem;
 }
+.about__center {
+    position: relative;
+}
 .about__center h1{
     padding: 4rem 0 3rem 0;
     text-align: center;
@@ -493,11 +496,10 @@ body {
 }
 #about span{
     z-index: 1;
-    position: relative;
     font-family: "Outline";
     font-weight: 300;
 }
-.about__title::after{
+.about__center::after{
     content: "";
     display: block;
     width: 11.5rem;
@@ -507,12 +509,12 @@ body {
     -moz-transition: all ease-out 1200ms;
     transition: all ease-out 1200ms;
     position: absolute;
-    top: 95%;
-    left: 92%;
+    top: 65%;
+    left: 62%;
     animation: 2.5s ease-out 0s 1 slideInFromRight;
 }
-.about__title:hover::after{
-    left: 115%;
+.about__center:hover::after{
+    left: 72%;
 }
 .about__section, .about__section2 {
     display: flex;
@@ -610,7 +612,7 @@ body {
     #summary h4{
         font-size: 1em;
     }
-    .title::after, .projects__title::after, .about__title::after{
+    .title::after, .projects__title::after, .about__center::after{
         width: 9.5rem;
     }
     .trans_btn{
@@ -622,7 +624,7 @@ body {
     .fade::before{
         animation: disappearLsmall linear 0.8s;
     }
-    .about__title::after{
+    .about__center::after{
         left: 100%;
     }
 }
@@ -745,10 +747,10 @@ body {
         width: 30%
     }
     #summary h1{
-        font-size: 1.8em;
+        font-size: 1.7em;
     }
     #name{
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
     #summary h3{
         font-size: 1em;
@@ -778,7 +780,7 @@ body {
         padding: 2rem 1rem;
         font-size: 1.5rem;
     }
-    .title::after, .projects__title::after, .about__title::after{
+    .title::after, .projects__title::after, .about__center::after{
         width: 4.7rem;
         height: 0.4rem;
     }
@@ -798,6 +800,9 @@ body {
         border-bottom: 2px #fff solid;
     }
     .about__center h1 {
+        font-size: 2.3rem;
+    }
+    #mywork h1 {
         font-size: 2.3rem;
     }
     #RVtrip {
@@ -850,7 +855,7 @@ body {
     #name{
         font-size: 3rem;
     }
-    .title::after, .projects__title::after, .about__title::after{
+    .title::after, .projects__title::after, .about__center::after{
         width: 6rem;
         height: 0.4rem;
     }
@@ -906,9 +911,9 @@ body {
         font-size: 1.8em;
     }
     #name{
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
-    .title::after, .projects__title::after, .about__title::after{
+    .title::after, .projects__title::after, .about__center::after{
         width: 4.7rem;
     }
     #summary h3{
